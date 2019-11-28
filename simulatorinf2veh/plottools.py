@@ -6,7 +6,7 @@ from bokeh.transform import linear_cmap
 from bokeh.models import ColumnDataSource, ColorBar, Span
 import numpy as np
 
-from carfollow import U_I
+from .carfollow import U_I
 
 
 def plot_single_trajectory(p, x, y, c, mapper,size=2):

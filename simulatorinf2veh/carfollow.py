@@ -9,7 +9,7 @@
 import numpy as np
 from math import sqrt
 from typing import Union
-from vehicles import Vehicle, DT, K_X, W_I, U_I
+from .vehicles import Vehicle, DT, K_X, W_I, U_I
 
 # ==============================================================================
 # Constants

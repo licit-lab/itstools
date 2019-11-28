@@ -6,7 +6,7 @@
 # Imports
 # ==============================================================================
 
-from network import TrafficNetwork
+from .network import TrafficNetwork
 
 from typing import Iterator
 
@@ -51,7 +51,7 @@ class SimulationControl:
 
     def run_simulation(self) -> None:
         """ Execute a traffic simulator"""
-        for t in self.time_iterator:
+        for _ in self.time_iterator:
             # self.solve_merges() # 1 link at a time
             for link in self.tfnet:
                 link.evolve_step()

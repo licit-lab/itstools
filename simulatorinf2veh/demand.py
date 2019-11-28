@@ -11,11 +11,11 @@ import collections.abc
 
 import numpy as np
 
-from plottools import plot_histogram, plot_stairs
+from .plottools import plot_histogram, plot_stairs
 from bokeh.plotting import show
 from bokeh.layouts import row, column
 
-from carfollow import K_X, W_I, U_I
+from .carfollow import K_X, W_I, U_I
 
 # ==============================================================================
 # Constants

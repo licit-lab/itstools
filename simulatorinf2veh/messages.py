@@ -6,9 +6,9 @@
 # Imports
 # ==============================================================================
 
-from support import speed_pulse, speed_drop
+from .support import speed_pulse, speed_drop
 
-from carfollow import U_I
+from .carfollow import U_I
 
 # ==============================================================================
 # Constants

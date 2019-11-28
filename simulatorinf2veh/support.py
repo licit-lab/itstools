@@ -3,7 +3,7 @@
 """
 
 import numpy as np
-from carfollow import U_I
+from .carfollow import U_I
 
 np.random.seed(100)
 
