@@ -1,26 +1,26 @@
-================
-simulatorinf2veh
-================
+==========
+connectv2x
+==========
 
 
-.. image:: https://img.shields.io/pypi/v/simulatorinf2veh.svg
-        :target: https://pypi.python.org/pypi/simulatorinf2veh
+.. image:: https://img.shields.io/pypi/v/connectv2x.svg
+        :target: https://pypi.python.org/pypi/connectv2x
 
-.. image:: https://img.shields.io/travis/aladinoster/simulatorinf2veh.svg
-        :target: https://travis-ci.org/aladinoster/simulatorinf2veh
+.. image:: https://img.shields.io/travis/aladinoster/connectv2x.svg
+        :target: https://travis-ci.org/aladinoster/connectv2x
 
-.. image:: https://readthedocs.org/projects/simulatorinf2veh/badge/?version=latest
-        :target: https://simulatorinf2veh.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/connectv2x/badge/?version=latest
+        :target: https://connectv2x.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
 
 
-A package for tsimulating infrastructure to vehicle comunications for the Intelligent Transportation Systems Course
+A basic framework for simulating v2v/v2i connectivity in traffic systems
 
 
 * Free software: MIT license
-* Documentation: https://simulatorinf2veh.readthedocs.io.
+* Documentation: https://connectv2x.readthedocs.io.
 
 
 Features

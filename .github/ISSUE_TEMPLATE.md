@@ -1,4 +1,4 @@
-* simulatorinf2veh version:
+* connectv2x version:
 * Python version:
 * Operating System:
 

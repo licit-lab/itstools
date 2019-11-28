@@ -1,4 +1,4 @@
-Welcome to simulatorinf2veh's documentation!
+Welcome to connectv2x's documentation!
 ======================================
 
 .. toctree::
@@ -10,6 +10,7 @@ Welcome to simulatorinf2veh's documentation!
    usage
    modules
    contributing
+   authors
    history
 
 Indices and tables

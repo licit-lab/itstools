@@ -48,24 +48,24 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
-	flake8 simulatorinf2veh tests
+	flake8 connectv2x tests
 
 test: ## run tests quickly with the default Python
-	python setup.py test
+	pytest
 
 test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source simulatorinf2veh setup.py test
+	coverage run --source connectv2x -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/simulatorinf2veh.rst
+	rm -f docs/connectv2x.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ simulatorinf2veh
+	sphinx-apidoc -o docs/ connectv2x
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

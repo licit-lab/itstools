@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install simulatorinf2veh, run this command in your terminal:
+To install connectv2x, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install simulatorinf2veh
+    $ pip install connectv2x
 
-This is the preferred method to install simulatorinf2veh, as it will always install the most recent stable release.
+This is the preferred method to install connectv2x, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for simulatorinf2veh can be downloaded from the `Github repo`_.
+The sources for connectv2x can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/aladinoster/simulatorinf2veh
+    $ git clone git://github.com/aladinoster/connectv2x
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/aladinoster/simulatorinf2veh/tarball/master
+    $ curl -OJL https://github.com/aladinoster/connectv2x/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/aladinoster/simulatorinf2veh
-.. _tarball: https://github.com/aladinoster/simulatorinf2veh/tarball/master
+.. _Github repo: https://github.com/aladinoster/connectv2x
+.. _tarball: https://github.com/aladinoster/connectv2x/tarball/master

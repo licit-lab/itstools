@@ -12,9 +12,9 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [ ]
 
-setup_requirements = [ ]
+setup_requirements = ['pytest-runner', ]
 
-test_requirements = [ ]
+test_requirements = ['pytest>=3', ]
 
 setup(
     author="Andres Ladino",
@@ -31,18 +31,18 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="A package for tsimulating infrastructure to vehicle comunications for the Intelligent Transportation Systems Course",
+    description="A basic framework for simulating v2v/v2i connectivity in traffic systems",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='simulatorinf2veh',
-    name='simulatorinf2veh',
-    packages=find_packages(include=['simulatorinf2veh', 'simulatorinf2veh.*']),
+    keywords='connectv2x',
+    name='connectv2x',
+    packages=find_packages(include=['connectv2x', 'connectv2x.*']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/aladinoster/simulatorinf2veh',
+    url='https://github.com/aladinoster/connectv2x',
     version='0.1.1',
     zip_safe=False,
 )

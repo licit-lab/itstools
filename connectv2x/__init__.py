@@ -1,4 +1,4 @@
-"""Top-level package for simulatorinf2veh."""
+"""Top-level package for connectv2x."""
 
 __author__ = """Andres Ladino"""
 __email__ = 'aladinoster@gmail.com'

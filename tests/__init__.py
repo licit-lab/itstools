@@ -1,1 +1,1 @@
-"""Unit test package for simulatorinf2veh."""
+"""Unit test package for connectv2x."""
