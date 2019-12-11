@@ -54,6 +54,7 @@ class CarFollowLaw(Vehicle):
         veh_type: str = "HDV",
         veh_lead=None,
         behavior: str = None,
+        **kwargs
     ) -> None:
         super().__init__(
             init_pos=x0,
@@ -61,30 +62,40 @@ class CarFollowLaw(Vehicle):
             init_lane=l0,
             veh_type=veh_type,
             veh_lead=veh_lead,
+            **kwargs
         )
         self.behavior = behavior
         self.acc = False
+        self.set_parameters(**kwargs)
 
-    @property
-    def u(self) -> float:
-        """
-            Free flow speed
-        """
-        return U_I
+    def set_parameters(self, u=U_I, w=W_I, k_x=K_X):
+        # self._u = u
+        # self._w = w
+        # self._k_x = k_x
+        self.u = u
+        self.w = w
+        self.k_x = k_x
 
-    @property
-    def w(self) -> float:
-        """
-            Shockwave speed
-        """
-        return W_I
+    # @property
+    # def u(self) -> float:
+    #     """
+    #         Free flow speed
+    #     """
+    #     return self._u
 
-    @property
-    def k_x(self) -> float:
-        """
-            Jam density
-        """
-        return K_X
+    # @property
+    # def w(self) -> float:
+    #     """
+    #         Shockwave speed
+    #     """
+    #     return self._w
+
+    # @property
+    # def k_x(self) -> float:
+    #     """
+    #         Jam density
+    #     """
+    #     return self._k_x
 
     @property
     def s0(self) -> float:
@@ -178,8 +189,8 @@ class Tampere(CarFollowLaw):
         self,
         x0: float,
         v0: float,
-        l0: float,
         veh_type: str,
+        l0: float=0,
         veh_lead=None,
         **kwargs
     ) -> None:
@@ -278,6 +289,11 @@ class Tampere(CarFollowLaw):
             self.vd = self.control
             self.a = max(A_MIN, min(self.free_acc() / 4, A_MAX))
 
+    def __repr__(self)->str:
+        return f"{self.__class__.__name__}(x0={self.x_t},v0={self.v_t})"
+
+    def __str__(self)->str:
+        return f"{self.__class__.__name__}(x0={self.x_t},v0={self.v_t})"        
 
 # ==============================================================================
 # IDM Car Following Model
