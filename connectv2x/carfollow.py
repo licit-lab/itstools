@@ -25,7 +25,7 @@ C_3 = 0.5  # Tampere coefficient
 
 # IDM MODEL
 A_MAX = 3  # Max accel
-A_MIN = -3  # Min accel
+A_MIN = - 3  # Min accel
 
 B = 1.67  # Max decel
 DELTA = 4  # Exponent
@@ -54,7 +54,7 @@ class CarFollowLaw(Vehicle):
         veh_type: str = "HDV",
         veh_lead=None,
         behavior: str = None,
-        **kwargs
+        **kwargs,
     ) -> None:
         super().__init__(
             init_pos=x0,
@@ -62,40 +62,40 @@ class CarFollowLaw(Vehicle):
             init_lane=l0,
             veh_type=veh_type,
             veh_lead=veh_lead,
-            **kwargs
+            **kwargs,
         )
         self.behavior = behavior
         self.acc = False
-        self.set_parameters(**kwargs)
+        self.set_traffic(**kwargs)
 
-    def set_parameters(self, u=U_I, w=W_I, k_x=K_X):
-        # self._u = u
-        # self._w = w
-        # self._k_x = k_x
-        self.u = u
-        self.w = w
-        self.k_x = k_x
+    def set_traffic(self, **kwargs):
+        self._u = kwargs.get("u", U_I)
+        self._w = kwargs.get("w", W_I)
+        self._k_x = kwargs.get("k_x", K_X)
+        # self.u = u
+        # self.w = w
+        # self.k_x = k_x
 
-    # @property
-    # def u(self) -> float:
-    #     """
-    #         Free flow speed
-    #     """
-    #     return self._u
+    @property
+    def u(self) -> float:
+        """
+            Free flow speed
+        """
+        return self._u
 
-    # @property
-    # def w(self) -> float:
-    #     """
-    #         Shockwave speed
-    #     """
-    #     return self._w
+    @property
+    def w(self) -> float:
+        """
+            Shockwave speed
+        """
+        return self._w
 
-    # @property
-    # def k_x(self) -> float:
-    #     """
-    #         Jam density
-    #     """
-    #     return self._k_x
+    @property
+    def k_x(self) -> float:
+        """
+            Jam density
+        """
+        return self._k_x
 
     @property
     def s0(self) -> float:
@@ -190,9 +190,9 @@ class Tampere(CarFollowLaw):
         x0: float,
         v0: float,
         veh_type: str,
-        l0: float=0,
+        l0: float = 0,
         veh_lead=None,
-        **kwargs
+        **kwargs,
     ) -> None:
         super().__init__(
             x0=x0,
@@ -201,7 +201,7 @@ class Tampere(CarFollowLaw):
             veh_type=veh_type,
             veh_lead=veh_lead,
             behavior=self.__class__.__name__,
-            **kwargs
+            **kwargs,
         )
         self.set_parameters(**kwargs)
 
@@ -289,11 +289,12 @@ class Tampere(CarFollowLaw):
             self.vd = self.control
             self.a = max(A_MIN, min(self.free_acc() / 4, A_MAX))
 
-    def __repr__(self)->str:
+    def __repr__(self) -> str:
         return f"{self.__class__.__name__}(x0={self.x_t},v0={self.v_t})"
 
-    def __str__(self)->str:
-        return f"{self.__class__.__name__}(x0={self.x_t},v0={self.v_t})"        
+    def __str__(self) -> str:
+        return f"{self.__class__.__name__}(x0={self.x_t},v0={self.v_t})"
+
 
 # ==============================================================================
 # IDM Car Following Model
