@@ -176,8 +176,8 @@ class Derivator:
 
 
 class Integrator:
-    def __init__(self):
-        self.x = [0]
+    def __init__(self, x0=0):
+        self.x = [x0]
         self.ix = [0]
         self.T = DT
         self.t = [0]
