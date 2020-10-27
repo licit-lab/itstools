@@ -1,1 +1,1 @@
-"""Unit test package for connectv2x."""
+"""Unit test package for itstools."""

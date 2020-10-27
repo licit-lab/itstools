@@ -1,4 +1,4 @@
-* connectv2x version:
+* itstools version:
 * Python version:
 * Operating System:
 

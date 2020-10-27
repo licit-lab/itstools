@@ -25,5 +25,5 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: aladinoster/connectv2x
+    repo: aladinoster/itstools
     python: 3.8

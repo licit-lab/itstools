@@ -1,26 +1,25 @@
-==========
-connectv2x
-==========
+itstools
+========
 
 
-.. image:: https://img.shields.io/pypi/v/connectv2x.svg
-        :target: https://pypi.python.org/pypi/connectv2x
+.. image:: https://img.shields.io/pypi/v/itstools.svg
+        :target: https://pypi.python.org/pypi/itstools
 
-.. image:: https://img.shields.io/travis/aladinoster/connectv2x.svg
-        :target: https://travis-ci.org/aladinoster/connectv2x
+.. image:: https://img.shields.io/travis/research-licit/itstools.svg
+        :target: https://travis-ci.org/research-licit/itstools
 
-.. image:: https://readthedocs.org/projects/connectv2x/badge/?version=latest
-        :target: https://connectv2x.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/itstools/badge/?version=latest
+        :target: https://itstools.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
 
 
-A basic framework for simulating v2v/v2i connectivity in traffic systems
+A package for creating simple emulation of vehicle platoons
 
 
 * Free software: MIT license
-* Documentation: https://connectv2x.readthedocs.io.
+* Documentation: https://vplatoon.readthedocs.io.
 
 
 Features

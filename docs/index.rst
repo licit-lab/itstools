@@ -1,4 +1,4 @@
-Welcome to connectv2x's documentation!
+Welcome to itstools's documentation!
 ======================================
 
 .. toctree::
