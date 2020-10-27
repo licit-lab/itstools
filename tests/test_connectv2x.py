@@ -5,8 +5,8 @@
 import pytest
 import unittest
 
-from connectv2x.carfollow import Tampere
-from connectv2x.support import speed_pulse
+from itstools.connectv2x.carfollow import Tampere
+from itstools.connectv2x.support import speed_pulse
 import numpy as np
 
 

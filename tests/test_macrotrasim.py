@@ -5,7 +5,7 @@
 import pytest
 
 
-from macrotrasim import macrotrasim
+from itstools.macrotrasim import macrotrasim
 
 
 @pytest.fixture
