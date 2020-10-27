@@ -1,15 +1,4 @@
 itstools
-========
-
-
-.. image:: https://img.shields.io/pypi/v/itstools.svg
-        :target: https://pypi.python.org/pypi/itstools
-
-.. image:: https://img.shields.io/travis/research-licit/itstools.svg
-        :target: https://travis-ci.org/research-licit/itstools
-
-.. image:: https://readthedocs.org/projects/itstools/badge/?version=latest
-        :target: https://itstools.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
