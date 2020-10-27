@@ -1,14 +1,11 @@
-itstools
-        :alt: Documentation Status
+========
+ITStools
+========
 
-
-
-
-A package for creating simple emulation of vehicle platoons
-
+A package with several tools for testing basic funcitonalities in Intelligent Transporation Systems.
 
 * Free software: MIT license
-* Documentation: https://vplatoon.readthedocs.io.
+* Documentation: https://itstools.readthedocs.io.
 
 
 Features
