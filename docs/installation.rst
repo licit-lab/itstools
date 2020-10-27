@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install vplatoon, run this command in your terminal:
+To install itstools, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install itstools
+    $ pip install git+https://github.com/research-licit/itstools.git@main
 
-This is the preferred method to install vplatoon, as it will always install the most recent stable release.
+This is the preferred method to install itstools, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
