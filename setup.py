@@ -10,7 +10,11 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ["numpy>=1.19.1",
+"bokeh>=2.2.2",
+"pandas>=1.1.0",
+"matplotlib>=3.3.1",
+"jupyter>=1.0.0",]
 
 setup_requirements = ['pytest-runner', ]
 
@@ -26,13 +30,10 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
     description="A package containing tools for simulating features for Intelligent Transportaiton Systems",
-    description=" creating simple emulation of vehicle platoons",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
