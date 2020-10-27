@@ -2,7 +2,7 @@
 History
 =======
 
-0.1.0 (2019-11-29)
+0.1.0 (2020-10-27)
 ------------------
 
-* First release on PyPI.
+* First release merging connectv2x, vplatoon, macrotrasim

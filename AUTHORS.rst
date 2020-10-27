@@ -5,9 +5,9 @@ Credits
 Development Lead
 ----------------
 
-* Andres Ladino <aladinoster@gmail.com>
+* Andres Ladino <andres.ladino@univ-eiffel.fr>
 
 Contributors
 ------------
 
-None yet. Why not be the first?
+* Pierre-Antoine Laharotte <pierre-antoine.laharotte@univ-eiffel.fr>

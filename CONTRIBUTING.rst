@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/research-licit/itstools/issues.
+Report bugs at https://github.com/reseach-licit/itstools/issues.
 
 If you are reporting a bug, please include:
 
@@ -111,7 +111,7 @@ Tips
 
 To run a subset of tests::
 
-$ pytest tests.test_itstools
+$ pytest tests
 
 
 Deploying
