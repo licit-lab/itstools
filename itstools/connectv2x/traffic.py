@@ -6,6 +6,7 @@
 # Imports
 # ==============================================================================
 
+from dataclasses import dataclass
 import numpy as np
 from bokeh.plotting import figure, show
 from .vehicles import K_X, W_I, U_I
@@ -15,11 +16,12 @@ from .vehicles import K_X, W_I, U_I
 # ==============================================================================
 
 
+@dataclass
 class FundamentalDiagram:
-    def __init__(self, w=W_I, u=U_I, k_x=K_X):
-        self.w = w
-        self.k_x = k_x
-        self.u = u
+
+    w: float = W_I
+    k_x: float = K_X
+    u: float = U_I
 
     @property
     def C(self):
@@ -57,9 +59,3 @@ class FundamentalDiagram:
         p.xaxis.axis_label = xlabel
         p.yaxis.axis_label = ylabel
         return p
-
-    def __repr__(self):
-        return f"{self.__class__.__name__}({self.w},{self.u},{self.k_x})"
-
-    def __str__(self):
-        return f"Fundamental diagram w: {self.w}, u:{self.u}, k_x:{self.k_x}"
