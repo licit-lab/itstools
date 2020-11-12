@@ -7,3 +7,8 @@ History
 
 * First release merging connectv2x, vplatoon, macrotrasim
 * Adding basic documentation
+
+0.5.1 (2020-11-12)
+------------------
+
+* Downgrading for compatibility on google collab
