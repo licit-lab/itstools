@@ -11,10 +11,10 @@ with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
 requirements = [
-    "numpy>=1.19.1",
-    "bokeh>=2.2.2",
-    "pandas>=1.1.0",
-    "matplotlib>=3.3.1",
+    "numpy>=1.18",
+    "bokeh>=2.1.1",
+    "pandas>=1.0.0",
+    "matplotlib>=3.2.2",
     "jupyter>=1.0.0",
 ]
 
