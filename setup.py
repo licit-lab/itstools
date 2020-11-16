@@ -15,6 +15,7 @@ requirements = [
     "bokeh>=2.1.1",
     "pandas>=1.0.0",
     "matplotlib>=3.2.2",
+    "scipy>=1.5.4",
     "jupyter>=1.0.0",
 ]
 

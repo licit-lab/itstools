@@ -1,0 +1,7 @@
+RANDOM_SEED = 100
+TRAFFIC_LIGHT_PERIOD = 90
+
+U_I = 25
+W_I = 6.25  # 5  # 6.25
+K_X = 0.16  # 0.2  # 0.16
+DT = 1 / (W_I * K_X)
