@@ -97,7 +97,7 @@ class Network(NetworkAbs):
             ]
         )
 
-        # Adding edges 
+        # Adding edges
 
         edges = []
         for road in self.roads:
@@ -171,6 +171,14 @@ class Network(NetworkAbs):
         """Return upstream intersection of road i 
         """
         return self._roadinter_map[road][0]
+
+    def get_entry_roads(self):
+        """ Return entry roads ids"""
+        return [x for x in self.roads if not self.get_downstream_roads(x)[0]]
+
+    def get_exit_roads(self):
+        """ Return exit roads ids"""
+        return [x for x in self.roads if not self.get_upstream_roads(x)[0]]
 
     def plot_road_network(
         self, xssing_labels=False, road_labels=False, figsize=(20, 10)

@@ -16,6 +16,8 @@ requirements = [
     "pandas>=1.0.0",
     "matplotlib>=3.2.2",
     "scipy>=1.5.4",
+    "holoviews>=1.13.5",
+    "hvplot>=0.6.0",
     "jupyter>=1.0.0",
 ]
 
