@@ -5,7 +5,7 @@
 import pytest
 
 
-from itstools.macrotrasim import macrotrasim
+from itstools.macrotrasim import FundamentalDiagram
 
 
 @pytest.fixture
