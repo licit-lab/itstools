@@ -20,6 +20,11 @@ from .manhattan import create_manhattan_intersections
 
 
 @dataclass
+class Link:
+    pass
+
+
+@dataclass
 class Network(NetworkAbs):
     sampleTime: int = 1
     period: int = 90

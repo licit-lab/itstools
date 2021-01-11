@@ -19,6 +19,7 @@ requirements = [
     "holoviews>=1.13.5",
     "hvplot>=0.6.0",
     "jupyter>=1.0.0",
+    "networkx>=2.4.0",
 ]
 
 setup_requirements = [
