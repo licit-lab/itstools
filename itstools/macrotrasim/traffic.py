@@ -6,10 +6,18 @@
 # Imports
 # ==============================================================================
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from itertools import count
+from typing import Iterable
+
+import pandas as pd
 import numpy as np
 from bokeh.plotting import figure, show
-from .vehicles import K_X, W_I, U_I
+from .constants import K_X, W_I, U_I
+import holoviews as hv
+import hvplot.pandas
+
+hv.extension("bokeh")
 
 # ==============================================================================
 # Clases
@@ -59,3 +67,42 @@ class FundamentalDiagram:
         p.xaxis.axis_label = xlabel
         p.yaxis.axis_label = ylabel
         return p
+
+
+@dataclass
+class RoadLink:
+    _idx: Iterable[int] = count(0)
+
+    def __post_init__(self):
+        self.idx = next(self.__class__._idx)
+
+
+@dataclass
+class Demand:
+    sampling_time: float = 15
+    fd: FundamentalDiagram = FundamentalDiagram()
+    cycle_time: float = 90
+
+    def __init__(self, network, simulation_steps=50):
+        self._entry_roads = network.get_entry_roads()
+        time_vector = np.arange(
+            0, simulation_steps * self.cycle_time, self.sampling_time
+        )
+        self._demand = pd.DataFrame(
+            data=0, columns=network.roads, index=time_vector
+        )
+        self.set_burst_value(self.fd.C)
+
+    def set_burst_value(self, burst_value):
+        """ Sets the burst values for incomming roads"""
+        self._demand[self._entry_roads] = burst_value
+
+    def plot(self):
+        return self._demand.hvplot.heatmap()
+
+    def __iter__(self):
+        self._it = self._demand.iterrows()
+        return self._it
+
+    def __next__(self):
+        yield next(self._it)

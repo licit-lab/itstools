@@ -5,7 +5,7 @@
 import pytest
 
 
-from itstools.vplatoon import vplatoon
+from itstools.vplatoon import PID
 
 
 @pytest.fixture
